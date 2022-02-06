@@ -1,0 +1,25 @@
+{
+  "name": "zirconia-cms",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run build --workspace=zirconia-common && lerna run dev --parallel --no-bail",
+    "build": "npm run build -w zirconia-common && lerna run build --stream --parallel",
+    "start": "lerna run start --parallel --no-bail",
+    "lint": "lerna run lint --parallel",
+    "format": "lerna run format --parallel"
+  },
+  "devDependencies": {
+    "@types/passport-jwt": "^3.0.6",
+    "@types/passport-local": "^1.0.34",
+    "lerna": "^4.0.0",
+    "typescript": "^4.5.5",
+    "zirconia-server": "file:packages/server"
+  },
+  "dependencies": {
+    "@nestjs/jwt": "^8.0.0",
+    "passport-jwt": "^4.0.0"
+  }
+}
