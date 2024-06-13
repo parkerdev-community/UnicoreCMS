@@ -1,8 +1,8 @@
-<img src="https://github.com/UnicoreProject/UnicoreCMS/blob/main/unicorecms.png?raw=true?v=2" />
+<img src="https://github.com/parkerdev-community/UnicoreCMS/blob/main/unicorecms.png?raw=true?v=2" />
 
 # UnicoreCMS
 
-[![Build Status](https://github.com/UnicoreProject/UnicoreCMS/actions/workflows/build.yml/badge.svg)](https://github.com/UnicoreProject/UnicoreCMS/actions)
+[![Build Status](https://github.com/parkerdev-community/UnicoreCMS/actions/workflows/build.yml/badge.svg)](https://github.comparkerdev-community/UnicoreCMS/actions)
 <p>
   <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=TypeScript"/>&nbsp;
   <img alt="Nuxt.js" src="https://img.shields.io/badge/-Nuxt.js-05122A?style=flat&logo=Nuxt.js"/>&nbsp;
