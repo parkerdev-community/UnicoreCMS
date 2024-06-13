@@ -1,4 +1,4 @@
-<img src="https://github.com/parkerdev-community/UnicoreCMS/blob/main/unicorecms.png?raw=true?v=2" />
+<img src="https://github.com/parkerdev-community/UnicoreCMS/blob/vue/unicorecms.png?raw=true?v=2" />
 
 # UnicoreCMS
 
