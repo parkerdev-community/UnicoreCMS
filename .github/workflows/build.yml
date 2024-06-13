@@ -1,8 +1,6 @@
 name: Build
 
 on:
-  push:
-    branches: [ vue, next ]
   pull_request:
     branches: [ vue, next ]
 
