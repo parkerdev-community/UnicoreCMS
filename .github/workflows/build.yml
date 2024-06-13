@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ vue, next ]
   pull_request:
-    branches: [ main ]
+    branches: [ vue, next ]
 
 jobs:
   build:
