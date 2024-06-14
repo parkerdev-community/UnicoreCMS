@@ -2,28 +2,40 @@
   "name": "unicore-cms",
   "version": "1.2.0",
   "private": true,
-  "workspaces": [
-    "workspaces/*"
-  ],
   "engines": {
-    "node": ">=14.0.0 <17.0.0"
+    "node": ">=19.0.0 <21.0.0"
   },
   "scripts": {
-    "dev": "engine-version && npm run build --workspace=unicore-common && lerna run dev --parallel --no-bail",
-    "build:all": "engine-version && npm run build -w unicore-common && npm run build --workspaces --if-present",
-    "build": "engine-version && npm run postbuild -w unicore-server && npm run build:client && npm run build:admin",
-    "build:client": "npm run build -w unicore-client",
-    "build:admin": "npm run build -w unicore-admin",
-    "start": "engine-version && lerna run start --parallel --no-bail",
-    "lint": "npm run lint --workspaces --if-present",
-    "format": "npm run format --workspaces --if-present",
-    "sync": "engine-version && npm run schema:sync -w unicore-server",
-    "seed": "engine-version && npm run seed:run -w unicore-server",
-    "boot": "npx lerna bootstrap && npm run build && npm link -w unicore-server && npm run sync"
+    "dev": "dotenv -- turbo dev --no-daemon",
+    "dev-server": "dotenv -- turbo dev --no-daemon --filter=server",
+    "dev-client": "dotenv -- turbo dev --no-daemon --filter=client",
+    "dev-admin": "dotenv -- turbo dev --no-daemon --filter=admin",
+
+    "build": "dotenv -- turbo build --no-daemon",
+    "build-server": "dotenv -- turbo build --no-daemon --filter=server",
+    "build-client": "dotenv -- turbo build --no-daemon --filter=client",
+    "build-admin": "dotenv -- turbo build --no-daemon --filter=admin",
+
+    "start": "dotenv -- turbo start --no-daemon",
+    "start-server": "dotenv -- turbo start --no-daemon --filter=server",
+    "start-client": "dotenv -- turbo start --no-daemon --filter=client",
+    "start-admin": "dotenv -- turbo start --no-daemon --filter=admin",
+
+    "test": "dotenv -- turbo test --no-daemon",
+    "lint": "turbo lint --no-daemon",
+    "clean": "turbo clean --no-daemon"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "devDependencies": {
-    "lerna": "^4.0.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "@turbo/gen": "^1.12.4",
+    "cpx": "^1.5.0",
+    "dotenv-cli": "^7.2.1",
+    "rimraf": "^5.0.5",
+    "turbo": "^1.12.4"
   },
   "dependencies": {
     "engine-version": "^1.0.2"

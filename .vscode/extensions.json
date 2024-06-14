@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"vue.volar",
+		"dbaeumer.vscode-eslint",
+		"editorconfig.editorconfig",
+		"visualstudioexptteam.vscodeintellicode",
+		"mikestead.dotenv",
+		"firsttris.vscode-jest-runner"
+	]
+}
